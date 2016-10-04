@@ -15,7 +15,7 @@ from sklearn.cross_validation import train_test_split
 def model():
     
     model = Sequential()
-    model.add(Dense(output_dim=64, input_dim=25))
+    model.add(Dense(output_dim=128, input_dim=25, init='he_normal'))
     model.add(Activation('relu'))
     model.add(Dense(output_dim=2))
     model.add(Activation('softmax'))
